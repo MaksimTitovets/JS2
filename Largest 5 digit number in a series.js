@@ -14,3 +14,10 @@ The number will be passed in as a string of only digits. It should return a five
 The number passed may be as large as 1000 digits.
 */
 
+function solution(digits){
+  let arr = [];
+  for (let i = 0; i < digits.length - 4; i++) {
+    arr.push(digits.slice(i, i + 5));
+  }
+  return Number(arr.sort((a, b) => b - a)[0]);
+}
