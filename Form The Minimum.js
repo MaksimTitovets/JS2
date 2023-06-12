@@ -17,3 +17,7 @@ minValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)
 Explanation:
 (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
 */
+
+function minValue(values) {
+  return Number(values.filter((x, i) => i === values.lastIndexOf(x)).sort((a, b) => a - b).join(''));
+}
